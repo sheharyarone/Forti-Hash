@@ -1,0 +1,32 @@
+<!-- collision_attack.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/styles.css" />
+
+    <title>Collision Attack</title>
+  </head>
+  <body>
+    <div>
+      <h1>Collision Attack</h1>
+      <form method="post">
+        <label for="message1">Message 1:</label>
+        <input type="text" id="message1" name="message1" />
+        <label for="message2">Message 2:</label>
+        <input type="text" id="message2" name="message2" />
+        <label for="salt">Salt:</label>
+        <input type="text" id="salt" name="salt" />
+        <button type="submit" class="butotn">Check Collision</button>
+      </form>
+      {% if message1 and message2 and salt %}
+      <p>Message 1: {{ message1 }}</p>
+      <p>Message 2: {{ message2 }}</p>
+      <p>Salt: {{ salt }}</p>
+      <p>Hash Value 1: {{ hash_value1 }}</p>
+      <p>Hash Value 2: {{ hash_value2 }}</p>
+      {% endif %}
+    </div>
+  </body>
+</html>

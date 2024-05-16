@@ -1,0 +1,28 @@
+<!-- hash_function.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/styles.css" />
+
+    <title>Hash Function</title>
+  </head>
+  <body>
+    <div>
+      <h1>Hash Function</h1>
+      <form method="post">
+        <label for="message">Message:</label>
+        <input type="text" id="message" name="message" />
+        <label for="salt">Salt:</label>
+        <input type="text" id="salt" name="salt" />
+        <button type="submit" class="button">Hash</button>
+      </form>
+      {% if message and salt %}
+      <p>Message: {{ message }}</p>
+      <p>Salt: {{ salt }}</p>
+      <p>Hash Value: {{ hash_value }}</p>
+      {% endif %}
+    </div>
+  </body>
+</html>
